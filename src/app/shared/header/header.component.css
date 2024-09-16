@@ -1,60 +1,112 @@
+* {
+  background-color: #dcb7db;
+  box-sizing: border-box; /* Ensure padding and borders are included in width and height */
+}
+
+/* Ensure the header stays at the top of the page */
 .main-header {
-    background-color: #fff;
-    color: #333;
-    padding: 25px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
+  position: fixed; /* Fixes the header at the top */
+  top: 0; /* Aligns it to the top of the viewport */
+  left: 0; /* Aligns it to the left of the viewport */
+  width: 100%; /* Ensures the header spans the full width of the viewport */
+  color: #333;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  z-index: 1000; /* Ensures the header stays above other content */
+}
+
+/* Adjust the content below the header to account for its fixed position */
+body {
+  margin: 0;
+  padding-top: 60px; /* Adjust this value based on the header's height */
+}
+
+.logo img {
+  max-height: 50px; /* Adjust the size of the logo as needed */
+}
+
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: space-between; /* Distributes menu items and right-side container */
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  margin: 0 auto; /* Centers the menu horizontally */
+}
+
+.nav-links li {
+  margin: 0 10px; /* Horizontal space between items */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a82dad; /* Change color on hover */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.btn-login {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #9d56be;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #664e6a; /* Darker color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .logo img {
-    max-height: 100px;
-  }
-  
+
   .navbar {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    flex-direction: column;
+    width: 100%;
   }
-  
-  .navbar ul {
-    list-style: none;
+
+  .nav-links {
     margin: 0;
-    padding: 0;
-    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
-  
-  .navbar li {
-    margin-right: 20px;
+
+  .nav-links li {
+    margin: 5px 0; /* Vertical space between items */
   }
-  
-  .navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
+
+  .nav-right {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
   }
-  
-  .navbar a:hover {
-    color: #ffcc00;
-  }
-  
-  .search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  input[type="search"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ccc; /* Borde del input */
-    border-radius: 5px; /* Esquinas redondeadas */
-    outline: none; /* Elimina el contorno al hacer clic */
-  }
-  
-  input[type="search"]:focus {
-    border-color: #007bff; /* Cambia el color del borde al enfocar */
-  }
+}

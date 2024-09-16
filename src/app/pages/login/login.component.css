@@ -1,0 +1,142 @@
+* {
+    background-color: #ded1dd;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents scrolling within the container */
+    margin: 0; /* Remove any default margin to ensure no lines are visible */
+    padding: 0; /* Remove padding if any */
+}
+
+/* Styles for the image column */
+.image-column {
+    flex: 1;
+    background-color: #ded1dd; /* Background color for the image column */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures the image doesn't overflow */
+    border: none; /* Ensure no border lines */
+}
+
+/* Ensures image fits correctly within its container */
+.login-image {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Styles for the form column */
+.form-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ded1dd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for better separation */
+    border-radius: 8px; /* Optional: rounded corners */
+    border: none; /* Ensure no border lines */
+}
+
+/* Title and description styles */
+.form-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center; /* Center aligns the title */
+}
+
+.form-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center; /* Center aligns the description */
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Example placeholder text for inputs */
+#email::placeholder,
+#password::placeholder {
+    color: #999; /* Light grey color for placeholder text */
+    font-style: italic; /* Italicize placeholder text */
+}
+
+/* Submit button styling */
+.submit-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Text links styling */
+.additional-description,
+.register-link {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
+
+.additional-description a,
+.register-link a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.additional-description a:hover,
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        height: auto; /* Allow column height to adjust based on content */
+    }
+
+    .image-column {
+        display: none; /* Hide the image column on small screens */
+    }
+
+    .form-column {
+        border-radius: 0; /* Remove rounded corners on small screens for better fit */
+        box-shadow: none; /* Remove shadow on small screens */
+        padding: 10px; /* Adjust padding for small screens */
+    }
+}

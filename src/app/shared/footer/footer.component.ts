@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+  equipoDesarrollo: string = "Arturo Rodriguez & Carlos Melo";
+  date = new Date();
+  year = this.date.getFullYear();
 }
