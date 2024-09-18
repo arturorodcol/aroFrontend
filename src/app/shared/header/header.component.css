@@ -3,7 +3,6 @@
   box-sizing: border-box; /* Ensure padding and borders are included in width and height */
 }
 
-/* Ensure the header stays at the top of the page */
 .main-header {
   position: fixed; /* Fixes the header at the top */
   top: 0; /* Aligns it to the top of the viewport */
@@ -12,7 +11,7 @@
   color: #333;
   padding: 10px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between logo and nav items */
   align-items: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 18px;
@@ -85,28 +84,29 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .main-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align logo and nav to the left */
   }
 
   .navbar {
-    flex-direction: column;
-    width: 100%;
+    width: 100%; /* Full width for navbar */
+    flex-direction: row; /* Keep navbar items in a row */
+    justify-content: space-between; /* Space between logo and nav */
+    margin-top: 10px; /* Space above navbar */
   }
 
   .nav-links {
     margin: 0;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row; /* Keep links in a row */
+    justify-content: flex-end; /* Align links to the right */
+    width: auto; /* Auto width for nav links */
   }
 
   .nav-links li {
-    margin: 5px 0; /* Vertical space between items */
+    margin: 0 5px; /* Space between items */
   }
 
   .nav-right {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
+    margin-left: auto; /* Pushes the login button to the right */
   }
 }

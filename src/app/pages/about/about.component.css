@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in the total width and height */
+    background-color: #ded1dd;
+  }
+  
+  .main-content-about {
+    padding: 100px; /* General padding */
+    margin-top: 60px; 
+    background-color: #ded1dd; /* Background color for the main content */
+    box-sizing: border-box;
+  }
+  
+  /* First Section */
+  .about {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .about-image {
+    max-width: 50%; /* Adjust the size of the image */
+    margin-right: 20px; /* Space between image and text */
+  }
+  
+  .text-box-about {
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Second Section */
+  .services {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .service-box {
+    background-color: #d1c4e9; /* Background color for the service boxes */
+    padding: 20px;
+    margin: 0 10px; /* Space between boxes */
+    text-align: center; /* Center text */
+    flex: 1; /* Equal width for each service box */
+  }
+  
+  .service-image {
+    max-width: 100%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Carousel */
+  .carousel-inner img {
+    max-height: 500px; /* Limit carousel image height */
+  }
+  
+  /* Fourth Section: Contact */
+  .contact {
+    display: flex;
+    align-items: center;
+    padding: 20px 80px; /* Left and right padding */
+    text-align: center; /* Center text */
+  }
+  
+  .contact-image {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    margin-right: 20px; /* Space between image and text */
+  }
+  
+  .contact-info {
+    flex: 1; /* Takes remaining space */
+  }
+  
+  /* Button Styles */
+  .contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ae00ff; /* Button color */
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transition effects */
+    margin-top: 20px; /* Space above the button */
+  }
+  
+  .contact-btn:hover {
+    background-color: #a45fae; /* Darker color on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .services {
+      flex-direction: column; /* Stack services vertically on small screens */
+    }
+  
+    .about {
+      flex-direction: column; /* Stack about content vertically on small screens */
+      align-items: center; /* Center elements */
+    }
+  
+    .about-image {
+      max-width: 80%; /* Adjust image size on smaller screens */
+    }
+  }
+  

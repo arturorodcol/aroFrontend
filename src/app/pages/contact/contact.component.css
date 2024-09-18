@@ -1,7 +1,9 @@
-* {
-  background-color: #ded1dd;
+.main-content {
+  margin-top: 60px; /* This keeps the content below the fixed header */
+  padding: 20px; /* Add some padding for better spacing */
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
-  
+
 .contact-form-container {
   max-width: 800px;
   margin: 150px auto; /* Center the container and provide space below the fixed header */
