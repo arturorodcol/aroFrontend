@@ -1,92 +1,254 @@
 * {
-    box-sizing: border-box; /* Ensure padding and borders are included in the total width and height */
-    background-color: #ded1dd;
-  }
-  
+  box-sizing: border-box;
+  background-color: #ded1dd;
+}
+
+.main-content-about {
+  padding: 100px;
+  margin-top: 60px; 
+  background-color: #ded1dd;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center; /* Center content horizontally */
+  margin-bottom: 40px;
+  padding-bottom: 50px; /* Add bottom padding */
+}
+
+.about-image {
+  max-width: 500px; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px auto; /* Space above and below, centered */
+  margin-top: 40px;
+  display: block; /* Image behaves as a block */
+}
+
+.text-box-about {
+  text-align: center; /* Center the text */
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align all items */
+  margin-bottom: 40px;
+  background-color: #ded1dd; /* Background color for the section */
+  padding: 20px; /* Padding for the section */
+}
+
+.services-title {
+  margin-bottom: 1.25rem; /* Space between title and description */
+  text-align: center; /* Center title text */
+  font-size: 1.75rem; /* Font size for title */
+}
+
+.services-description {
+  text-align: center; /* Center align the description text */
+  margin-bottom: 1.25rem; /* Space between description and service boxes */
+  font-size: 1.125rem; /* Font size for description */
+  color: #555; /* Softer description text color */
+  max-width: 600px; /* Limit width for better readability */
+}
+
+.all-service-box {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Row layout */
+  justify-content: center; /* Center the boxes */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.service-box {
+  background-color: #d1c4e9; /* Default background color for the box */
+  padding: 1.25rem; /* Space inside the box */
+  margin: 0.75rem; /* Space between boxes */
+  text-align: center; /* Center text */
+  flex: 1; /* Equal width for each service box */
+  min-width: 200px; /* Minimum width for smaller screens */
+  border: 2px solid #bd90f4; /* Border color */
+  border-radius: 0.5rem; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.service-box:hover {
+  background: #d1c4e9; /* Light hover effect */
+  transform: scale(1.05); /* Slightly enlarge the box */
+}
+
+.service-image {
+  max-width: 100%; /* Adjust image size */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 0.9375rem; /* Space below image */
+}
+
+/* Add background color to text elements */
+.service-box h3,
+.service-box p {
+  background-color: #d1c4e9; /* Background color for title and paragraph */
+  padding: 0.625rem; /* Add padding for better appearance */
+  border-radius: 0.3125rem; /* Rounded corners for the text background */
+}
+
+/* Change text color on hover */
+.service-box:hover h3,
+.service-box:hover p {
+  color: #38383b; /* Change text color to match the title on hover */
+}
+
+/* Carousel */
+.carousel {
+  margin: 1.25rem 0; /* 20px */
+  text-align: center; /* Center the text for the title and description */
+}
+
+.carousel-title {
+  text-align: center; /* Center the title */
+  font-size: 2rem; /* Font size for title */
+  margin: 1rem 0; /* Space above and below title */
+  color: #333; /* Title color */
+}
+
+.carousel-description {
+  text-align: center; /* Center the description */
+  font-size: 1.125rem; /* Font size for description */
+  margin-bottom: 1.25rem; /* Space below description */
+  color: #666; /* Description color */
+}
+
+.carousel-indicators {
+  padding-top: 0.625rem; /* 10px */
+  margin-top: 1rem; /* Space above indicators */
+}
+
+.carousel-inner {
+  position: relative; /* Ensures proper positioning */
+}
+
+.carousel-inner img {
+  max-height: 18.75rem; /* 300px */
+  width: 50%; /* Set width to 100% for responsiveness */
+  max-width: 300px; /* Maximum width of the image */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the circular area */
+  margin: 0 auto; /* Center the image */
+  display: block; /* Ensure it behaves like a block element */
+}
+
+.carousel-caption {
+  position: relative; /* Positioning relative to the carousel item */
+  padding: 0; /* No padding */
+  margin-top: 10px; /* Space above captions */
+  margin-bottom: 10px; /* Space below captions */
+  z-index: 1; /* Ensure it appears above the image */
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem; /* Adjust font size for title */
+  margin: 10px 0 0; /* Space above title */
+  background: none; /* No background */
+}
+
+.carousel-caption p {
+  font-size: 1rem; /* Adjust font size for description */
+  margin: 0; /* No additional margin */
+  background: none; /* No background */
+}
+
+/* Change color of carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #bd90f4; /* Set the background color for arrows */
+  border-radius: 50%; /* Optional: Make them circular */
+}
+
+/* Optional: Change the size of the control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+}
+
+/* Contact Section */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Padding for mobile */
+  text-align: center; /* Center text */
+}
+
+.contact-image {
+  max-width: 150px; /* Adjust as needed */
+  height: auto;
+  margin-right: 20px; /* Space between image and text */
+}
+
+.contact-info {
+  flex: 1; /* Takes remaining space */
+}
+
+/* Button Styles */
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #664e6a; /* Button color */
+  color: #fff;
+  text-decoration: none; /* Remove underline from link */
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Transition effect */
+  margin-top: 20px; /* Space above the button */
+}
+
+.contact-btn:hover {
+  background-color: #a45fae; /* Darker color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .main-content-about {
-    padding: 100px; /* General padding */
-    margin-top: 60px; 
-    background-color: #ded1dd; /* Background color for the main content */
-    box-sizing: border-box;
+    padding: 20px; /* Reduced padding on smaller screens */
   }
-  
-  /* First Section */
-  .about {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  
+
   .about-image {
-    max-width: 50%; /* Adjust the size of the image */
-    margin-right: 20px; /* Space between image and text */
+    max-width: 90%; /* Adjust max width for smaller screens */
   }
-  
-  .text-box-about {
-    text-align: left; /* Align text to the left */
+
+  .services-title,
+  .services-description {
+    font-size: 1.5rem; /* Smaller font size */
   }
-  
-  /* Second Section */
-  .services {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-  }
-  
+
   .service-box {
-    background-color: #d1c4e9; /* Background color for the service boxes */
-    padding: 20px;
-    margin: 0 10px; /* Space between boxes */
-    text-align: center; /* Center text */
-    flex: 1; /* Equal width for each service box */
+    min-width: 100%; /* Full width on smaller screens */
   }
-  
-  .service-image {
-    max-width: 100%; /* Adjust image size */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  /* Carousel */
-  .carousel-inner img {
-    max-height: 500px; /* Limit carousel image height */
-  }
-  
-  /* Fourth Section: Contact */
+
   .contact {
-    display: flex;
-    align-items: center;
-    padding: 20px 80px; /* Left and right padding */
-    text-align: center; /* Center text */
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    padding: 10px; /* Reduced padding */
   }
-  
+
   .contact-image {
-    max-width: 150px; /* Adjust as needed */
-    height: auto;
-    margin-right: 20px; /* Space between image and text */
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 10px; /* Add space below image */
   }
-  
-  .contact-info {
-    flex: 1; /* Takes remaining space */
+}
+
+@media (max-width: 480px) {
+  .carousel-title {
+    font-size: 1.5rem; /* Smaller font size for mobile */
   }
-  
-  /* Button Styles */
-  .contact-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ae00ff; /* Button color */
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    transition: background-color 0.3s ease; /* Transition effects */
-    margin-top: 20px; /* Space above the button */
+
+  .carousel-description {
+    font-size: 1rem; /* Smaller description font */
   }
-  
-  .contact-btn:hover {
-    background-color: #a45fae; /* Darker color on hover */
-  }
+}
+
   
   /* Responsive adjustments */
   @media (max-width: 768px) {

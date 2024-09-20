@@ -7,13 +7,13 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px; /* Adjust padding for spacing */
+    padding: 5px 10px; 
     color: #333;
-    position: relative; /* Use relative positioning to ensure footer placement */
-    background-color: #dcb7db; /* Optional: background color for better visibility */
+    position: relative; 
+    background-color: #dcb7db;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
-    box-sizing: border-box; /* Include padding and border in the width */
+    box-sizing: border-box; 
 }
 
 .footer-container {
@@ -21,8 +21,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Adjust as needed */
-    box-sizing: border-box; /* Include padding and border in the width */
+    max-width: 1200px;
+    box-sizing: border-box; 
 }
 
 .footer-logo {
