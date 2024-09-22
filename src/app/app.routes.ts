@@ -8,6 +8,8 @@ import { ActperfilComponent } from './pages/actperfil/actperfil.component';
 import { TustalleresComponent } from './pages/tustalleres/tustalleres.component';
 import { VerUsuariosComponent } from './pages/admusuarios/ver-usuarios/ver-usuarios.component';
 import { VerTalleresComponent } from './pages/admtalleres/ver-talleres/ver-talleres.component';
+import { AgregarUsuariosComponent } from './pages/admusuarios/agregar-usuarios/agregar-usuarios.component';
+import { AgregarTalleresComponent } from './pages/admtalleres/agregar-talleres/agregar-talleres.component';
 
 export const routes: Routes = [
     {
@@ -31,27 +33,27 @@ export const routes: Routes = [
         component: LoginComponent,
     },
     // Ruta para ver talleres y crear talleres 
-    // {
-    //     path: 'administrar-talleres',
-    //     title: 'Administrar Talleres',
-    //     component: VerTalleresComponent,
-    // },
-    // {
-    //     path: 'administrar-talleres',
-    //     title: 'Administrar Talleres',
-    //     // component: 
-    // },
+    {
+        path: 'administrar-talleres',
+        title: 'Administrar Talleres',
+        component: VerTalleresComponent,
+    },
+    {
+        path: 'agregar-talleres',
+        title: 'Administrar Talleres',
+        component: AgregarTalleresComponent,
+    },
     // // Agregar ruta para ver usuarios y crear usuarios 
     {
         path: 'administrar-usuarios',
         title: 'Mis Usuarios',
         component: VerUsuariosComponent,
     },
-    // {
-    //     path: 'administrar-usuarios',
-    //     title: 'Administrar Talleres',
-    //     // component: 
-    // },
+    {
+        path: 'agregar-usuarios',
+        title: 'Agregar Usuarios',
+        component: AgregarUsuariosComponent,
+    },
     {
         path: 'administrar-contactos',
         title: 'Administrar Contactos',

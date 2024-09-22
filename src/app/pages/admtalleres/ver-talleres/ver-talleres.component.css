@@ -1,0 +1,117 @@
+* {
+    background-color: #ded1dd; /* Global background color */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+    min-height: 100vh; /* Full height for the wrapper */
+  }
+
+.main-content {
+    margin-top: 60px; /* Keeps the content below the fixed header */
+    padding: 20px; /* Adds padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: 1;
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+}
+
+/* Description section styles */
+.adm-users-description {
+    text-align: center; /* Center the text */
+    margin-bottom: 30px; /* Space below the description */
+}
+
+/* Search box styles */
+.search-box {
+    position: relative; /* Relative positioning for the icon */
+    margin-bottom: 20px; /* Space below the search box */
+    width: 100%; /* Full width */
+}
+
+.search-box input {
+    width: 100%; /* Full width */
+    padding: 10px 40px 10px 10px; /* Space for the search icon */
+    border: 1px solid #ced4da; /* Border for input */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.input-group-text {
+    position: absolute;
+    right: 10px; /* Aligns the icon */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Table styles */
+.table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Remove double borders */
+    border-radius: 10px; /* Add border radius */
+    overflow: hidden; /* Ensure corners are rounded */
+}
+
+.table-dark {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+}
+
+.table th, .table td {
+    text-align: center; /* Center align text */
+    padding: 10px; /* Padding for cells */
+    border: 1px solid #495057; /* Border for cells */
+}
+
+.table-active {
+    background-color: #495057; /* Active cell background */
+}
+
+/* Button styles */
+.buttom-add-user {
+    text-align: center; /* Center the button and text */
+    margin-top: 30px; /* Space above */
+}
+
+.buttom-add-user h5 {
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border: none; /* Remove border */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .table {
+        font-size: 14px; /* Slightly smaller font on mobile */
+    }
+
+    .buttom-add-user h5 {
+        font-size: 1.2em; /* Smaller heading for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .adm-users-description {
+        margin-top: 20px; /* Adjust margin on smaller screens */
+    }
+
+    .table {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .buttom-add-user h5 {
+        font-size: 1em; /* Smaller heading for mobile */
+    }
+}

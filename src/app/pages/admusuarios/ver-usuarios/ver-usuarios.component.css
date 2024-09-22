@@ -1,0 +1,139 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ded1dd; /* Global background color applied here */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 70px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adm-users-description {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+.search-box {
+  position: relative; /* Relative positioning for the icon */
+  width: 100%; /* Full width */
+  margin-bottom: 20px; /* Space below the search box */
+}
+
+.search-box input {
+  width: 100%; /* Full width */
+  padding: 10px 40px; /* Space for the search icon */
+  border: 1px solid #ced4da; /* Border for input */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.input-group-text {
+  position: absolute;
+  right: 10px; /* Aligns the icon */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.table-manage-users {
+  width: 100%;
+  max-width: 1200px;
+  overflow-x: auto;
+}
+
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.table thead {
+  background-color: #a388a0;
+  color: white;
+}
+
+.table tbody tr {
+  transition: background-color 0.3s;
+}
+
+.table tbody tr:hover {
+  background-color: #be9cb1;
+}
+
+.table td,
+.table th {
+  text-align: center;
+  padding: 10px;
+}
+
+.table th {
+  padding: 15px; /* More padding for header */
+}
+
+/* Button styles */
+.buttom-add-user {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.buttom-add-user h5 {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 40px; /* Consistent height */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .buttom-add-user h5 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .adm-users-description {
+    margin-top: 30px;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .buttom-add-user h5 {
+    font-size: 1em;
+  }
+}

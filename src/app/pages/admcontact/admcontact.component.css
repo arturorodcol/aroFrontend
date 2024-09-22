@@ -1,0 +1,96 @@
+* {
+  background-color: #ded1dd; /* Global background color */
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default padding */
+  box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Align elements vertically */
+  min-height: 100vh; /* Full height for the wrapper */
+}
+
+.main-content {
+  flex: 1; /* Allow main content to grow and fill available space */
+  margin-top: 70px; /* Keeps the content below the fixed header */
+  padding: 20px; /* Adds padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center elements horizontally */
+}
+
+/* Description section styles */
+.adm-admin-contact {
+  text-align: center; /* Center the text */
+  margin: 50px 0 30px; /* Combined margin for better control */
+}
+
+/* Search box styles */
+.search-box {
+  position: relative; /* Relative positioning for the icon */
+  width: 100%; /* Full width */
+  margin-bottom: 20px; /* Space below the search box */
+}
+
+.search-box input {
+  width: 100%; /* Full width */
+  padding: 10px 40px; /* Space for the search icon */
+  border: 1px solid #ced4da; /* Border for input */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.input-group-text {
+  position: absolute;
+  right: 10px; /* Aligns the icon */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* Table styles */
+.table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Remove double borders */
+  border-radius: 10px; /* Add border radius */
+  overflow: hidden; /* Ensure corners are rounded */
+}
+
+.table-dark {
+  background-color: #343a40; /* Dark background */
+  color: white; /* White text */
+}
+
+.table th, .table td {
+  text-align: center; /* Center align text */
+  padding: 10px; /* Padding for cells */
+  border: 1px solid #495057; /* Border for cells */
+}
+
+.table-active {
+  background-color: #495057; /* Active cell background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .table {
+    font-size: 14px; /* Slightly smaller font on mobile */
+  }
+
+  .adm-users-description {
+    margin: 30px 0; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .adm-users-description {
+    margin-top: 20px; /* Adjust margin on smaller screens */
+  }
+
+  .table {
+    font-size: 12px; /* Further reduce font size */
+  }
+}

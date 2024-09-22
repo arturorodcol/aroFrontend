@@ -1,1 +1,17 @@
-<p>modal works!</p>
+@if (aModal) {
+    <div class="modal-overlay">
+        <div class="modal-dialog">
+          <div class="modal-content">
+    
+            <div class="modal-body">
+    <!-- aca en medio de contet abre toda la informacion que pondre desde el otro lado de mi componente "todo lo
+      que emite el componente padre"  -->
+              <ng-content> </ng-content>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="cModal()">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+}

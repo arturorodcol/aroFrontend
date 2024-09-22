@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './modal.component.css'
 })
 export class ModalComponent {
+  
+  @Input() aModal:boolean = false; 
+  @Output() cModalEvent = new EventEmitter<void>();
 
+  cModal(){
+    this.aModal = false;
+    this.cModalEvent.emit();
+  }
 }
