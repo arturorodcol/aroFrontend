@@ -11,7 +11,8 @@
                   <div class="col-md-14">
             
                     <div class="search-box">
-                      <input type="text"  placeholder="Buscar..." class="form-control">
+                      <input type="text"
+                      [(ngModel)]="searchTerm" (keyup)="filterData()"  placeholder="Buscar..." class="form-control">
                         <span class="input-group-text" id="search-icon">
                             <i class="fa fa-search"></i>
                         </span>
@@ -19,27 +20,28 @@
             
             
               <table class="table table-dark">
-                  <tbody>
-                    <tr>
-                      <th scope="row">id</th>
-                      <td colspan="2" class="table-active">Nombre</td>
-                      <td colspan="3" class="table-active">Descripcion</td>
-                      <td colspan="4" class="table-active">Precio</td>
-                      <td colspan="5" class="table-active">Fecha</td>
-                      <td colspan="6" class="table-active">Hora</td>
-                      <td colspan="7" class="table-active">Categoria</td>
-                      <td colspan="8" class="table-active text-center">Acciones</td>
-            
-                    </tr>
+
+                <thead>
                   <tr>
-                      <th scope="row">ID</th>
-                      <td colspan="2" class="table-active">nombre taller</td>
-                      <td colspan="3" class="table-active">Descripción taller</td>
-                      <td colspan="4" class="table-active">Precio taller</td>
-                      <td colspan="5" class="table-active">fecha taller</td>
-                      <td colspan="6" class="table-active">Hora taller</td>
-                      <td colspan="7" class="table-active">Seleccione categoria</td>
-                      <td colspan="8" class="table-active text-center" >
+                    <th scope="row">id</th>
+                    <td colspan="2" class="table-active">Nombre</td>
+                    <td colspan="3" class="table-active">Descripcion</td>
+                    <td colspan="4" class="table-active">Precio</td>
+                    <td colspan="5" class="table-active">Fecha</td>
+                    <td colspan="6" class="table-active">Hora</td>
+                    <td colspan="7" class="table-active text-center">Acciones</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (taller of misTalleres; track $index) {
+                    <tr>
+                      <th scope="row"> {{ $index + 1 }}</th>
+                      <td colspan="2" class="table-active">nombre taller {{ taller.nombre }} </td>
+                      <td colspan="3" class="table-active">Descripción taller {{ taller.descripcion }}</td>
+                      <td colspan="4" class="table-active">Precio taller {{ taller.precio }}</td>
+                      <td colspan="5" class="table-active">fecha taller {{ taller.fecha }}</td>
+                      <td colspan="6" class="table-active"> {{ taller.hora }} </td>
+                      <td colspan="7" class="table-active text-center" >
                         <!-- ONLY STYLE -->
                         <a class="btn btn-outline-success btn-sm m-2">
                         <!-- <a class="btn btn-outline-success btn-sm m-2"
@@ -62,8 +64,9 @@
                           Eliminar</a> 
                       </td>
                    </tr>
-                  </tbody>
-                </table>
+                  }
+                </tbody>
+              </table>
               </div>
               </div>
             </div>

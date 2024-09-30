@@ -1,0 +1,100 @@
+* {
+    background-color: #ded1dd; /* Global background color */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+    min-height: 100vh; /* Full height for the wrapper */
+}
+
+.main-content {
+    margin-top: 60px; /* Keeps the content below the fixed header */
+    padding: 20px; /* Adds padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: flex; /* Cambiar a flex para permitir alineación */
+    flex-direction: column; /* Align elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+.container {
+    max-width: 800px; /* Max width for the form container */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Padding for the form */
+    background-color: #ded1dd; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-control {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    background-color: #ded1dd; /* White background for inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+}
+
+.form-control:focus {
+    border-color: #9d56be; /* Border color on focus */
+    box-shadow: 0 0 5px rgba(157, 86, 190, 0.5); /* Shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+.mb-buttons {
+    display: flex; /* Align buttons in a row */
+    justify-content: center; /* Center buttons */
+    gap: 30px; /* Space between buttons */
+    margin-bottom: 15px; /* Margin below buttons */
+}
+
+.btn {
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.btn-primary {
+    background-color: #9d56be; /* Primary button color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+}
+
+.btn-primary:hover {
+    background-color: #664e6a; /* Hover color */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Danger button color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Hover color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    .form-label {
+        font-size: 14px; /* Smaller font size for labels */
+    }
+
+    .btn {
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+}

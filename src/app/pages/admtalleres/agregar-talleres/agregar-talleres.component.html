@@ -1,72 +1,71 @@
-<div class="container mt-5 pt-5">
-    <h4 class="text-center">Agregar Usuarios</h4>
-  
-    <form>
-            <!-- AGREGAR LA LOGICA -->
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input
-          type="text"
-          class="form-control"
-          id="nombre"
-          formControlName="nombre"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Descripcion</label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          formControlName="email"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="tipoDocumento" class="form-label">Precio</label>
-        <input
-          type="text"
-          class="form-control"
-          id="tipoDocumento"
-          formControlName="tipoDocumento"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="tipoDocumento" class="form-label">Fecha</label>
-        <input
-          type="text"
-          class="form-control"
-          id="tipoDocumento"
-          formControlName="tipoDocumento"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="tipoDocumento" class="form-label">Hora</label>
-        <input
-          type="text"
-          class="form-control"
-          id="tipoDocumento"
-          formControlName="tipoDocumento"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="rol" class="form-label">Categirua</label>
-        <select class="form-control" formControlName="rol" required>
-    <!-- AGREGAR LA LOGICA -->
-          <option ></option>
-          
-        </select>   
-      </div>
-  
-      <div class="mb-3">
-        <button type="button" class="btn btn-danger" routerLink="./../usuarios">
-          Cancelar
-        </button>
-        <button type="submit" class="btn btn-primary">Agregar Usuario</button>
-      </div>
-    </form>
-  </div>
+<div class="wrapper">
+  <main class="main-content">
+    <div class="container mt-5 pt-5">
+      <h4 class="text-center">Agregar Talleres</h4>
+    
+      <form>
+              <!-- AGREGAR LA LOGICA -->
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            formControlName="nombre"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Descripcion</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            formControlName="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="tipoDocumento" class="form-label">Precio</label>
+          <input
+            type="text"
+            class="form-control"
+            id="tipoDocumento"
+            formControlName="tipoDocumento"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="tipoDocumento" class="form-label">Fecha</label>
+          <input
+            type="text"
+            class="form-control"
+            id="tipoDocumento"
+            formControlName="tipoDocumento"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="tipoDocumento" class="form-label">Hora</label>
+          <input
+            type="text"
+            class="form-control"
+            id="tipoDocumento"
+            formControlName="tipoDocumento"
+            required
+          />
+        </div>
+    
+        <div class="mb-3">
+          <div class="mb-buttons">
+            <button type="button" class="btn btn-danger" routerLink="./../usuarios">
+              Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary">Agregar taller</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+

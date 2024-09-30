@@ -16,7 +16,9 @@
 
                     <section class="search-section">
                         <div class="search-box">
-                            <input type="text" placeholder="Buscar..." class="form-control">
+                            <input type="text"
+                            [(ngModel)]="searchTerm" (keyup)="filterData()" 
+                            placeholder="Buscar..." class="form-control">
                             <span class="input-group-text" id="search-icon">
                                 <i class="fa fa-search"></i>
                             </span>
@@ -36,21 +38,23 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td colspan="2" class="table-active">Nombre Ejemplo</td>
-                                <td colspan="3" class="table-active">ejemplo mail</td>
-                                <td colspan="4" class="table-active">123456789</td>
-                                <td colspan="5" class="table-active">Consulta Ejemplo</td>
-                                <td colspan="6" class="table-active">Detalle Ejemplo</td>
-                                <td colspan="7" class="table-active">
-                                    <select>
-                                        <option>Por contactar</option>
-                                        <option>Contactado</option>
-                                        <option>Usuario</option>
-                                    </select>
-                                </td>          
-                            </tr>
+                            @for (contacto of misContactos; track $index) {
+                                <tr>
+                                    <th scope="row">{{ $index +1 }}</th>
+                                    <td colspan="2" class="table-active">{{ contacto.nombre}} </td>
+                                    <td colspan="3" class="table-active">{{ contacto.correo }}</td>
+                                    <td colspan="4" class="table-active">{{contacto.telefono}}</td>
+                                    <td colspan="5" class="table-active">{{ contacto.descripcion }}</td>
+                                    <td colspan="6" class="table-active">{{ contacto.detalles }}</td>
+                                    <td colspan="7" class="table-active">
+                                        <select>
+                                            <option>Por contactar</option>
+                                            <option>Contactado</option>
+                                            <option>Usuario</option>
+                                        </select>
+                                    </td>          
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
