@@ -2,38 +2,45 @@
   <main class="main-content">
     <div class="container mt-5 pt-5">
       <h4 class="text-center">Agregar Usuarios</h4>
-    
-      <form [formGroup]="usuarioForm" (ngSubmit)="agregarUsuario()">
+
+      <form class="usuario-form-create" [formGroup]="usuarioForm" (ngSubmit)="crearUsuario()">
+
         <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
+            <label for="nombre" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              formControlName="nombre"
+              required
+            />
+        </div>
+
+        <div class="mb-3">
+          <label for="text" class="form-label">Email</label>
           <input
             type="text"
-            class="form-control"
-            id="nombre"
-            formControlName="nombre"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
             class="form-control"
             id="email"
             formControlName="email"
             required
           />
         </div>
+
         <div class="mb-3">
           <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
-          <input
+          <select 
             type="text"
-            class="form-control"
-            id="tipoDocumento"
+            class="form-control" 
             formControlName="tipoDocumento"
-            required
-          />
+            required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option>Cédula de ciudadania</option>
+            <option>Cédila de extranjeria</option>
+            <option>Pasaporte</option>
+          </select>          
         </div>
+
         <div class="mb-3">
           <label for="numeroDocumento" class="form-label"
             >Número de Documento</label
@@ -46,6 +53,7 @@
             required
           />
         </div>
+
         <div class="mb-3">
           <label for="login" class="form-label">Login</label>
           <input
@@ -69,6 +77,7 @@
         <div class="mb-3">
           <label for="rol" class="form-label">Rol</label>
           <select class="form-control" formControlName="rol" required>
+            <option value="" disabled selected>Selecciona una opción</option>
             <option>ADMINISTRADOR</option>
             <option>CLIENTE</option>
           </select>
@@ -76,10 +85,11 @@
     
         <div class="mb-3">
           <div class="mb-buttons">
-            <button type="button" class="btn btn-danger" routerLink="./../usuarios">
-              Cancelar
+                        
+            <a href="administrar-usuarios" class="btn btn-danger">Cancelar</a>
+            <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.valid">Agregar Usuario
             </button>
-            <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+
           </div>
         </div>
       </form>

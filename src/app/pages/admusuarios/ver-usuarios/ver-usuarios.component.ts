@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { Usuario } from '../../../core/interfaces/usuario.interface';
 import { ModalComponent } from '../../../components/modal/modal.component';
 import { AgregarUsuariosComponent } from '../agregar-usuarios/agregar-usuarios.component';
-import { FormsModule } from '@angular/forms';
 import { UsuariosService } from '../../../services/usuarios/usuarios.service';
 import { UsuarioModel } from '../../../core/models/usuario.model';
 import { config } from '../../../../environments/configuration/config';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ver-usuarios',
@@ -42,7 +42,7 @@ export class VerUsuariosComponent implements OnInit {
     }
 
     agregarUsuario() {
-      this.router.navigateByUrl('agregar-usuarios') 
+      this.router.navigateByUrl('agregar-usuarios'); 
     }
 
     

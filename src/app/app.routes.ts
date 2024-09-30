@@ -40,7 +40,7 @@ export const routes: Routes = [
     },
     {
         path: 'agregar-talleres',
-        title: 'Administrar Talleres',
+        title: 'Agregar Talleres',
         component: AgregarTalleresComponent,
     },
     // // Agregar ruta para ver usuarios y crear usuarios 

@@ -3,7 +3,7 @@ export interface Usuario {
     nombre: string;
     email:  string; 
     tipoDocumento:  string;
-    numeroDocumento:  string;
+    numeroDocumento:  number;
     login: string;
     password: string;
     rol: string;
